@@ -16,10 +16,6 @@ class ComicController extends Controller
     {
         $comics = Comic::all();
 
-        $data = [
-            'comics' => $comics
-        ];
-
         return view('comics.index', compact('comics'));
     }
 
