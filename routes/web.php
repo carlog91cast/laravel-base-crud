@@ -13,5 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',"HomeController@index")->name('admin.home');
-Route::get('/',"ComicController@index")->name('comics.index');
+Route::get('/',"HomeController@index")->name('homepage');
+Route::get('/comics',"ComicController@index")->name('comics');
