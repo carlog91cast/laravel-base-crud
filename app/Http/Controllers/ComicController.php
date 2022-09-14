@@ -20,7 +20,7 @@ class ComicController extends Controller
             'comics' => $comics
         ];
 
-        return view('comics.index', $data);
+        return view('comics.index', compact('comics'));
     }
 
     /**
