@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Providers\Comic;
+use PhpParser\Node\Expr\New_;
 
 class ComicController extends Controller
 {
@@ -37,7 +38,18 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $sentData = $request->all();
+
+        $comic = new Comic();
+        $comic->title = $sentData['title'];
+        $comic->description = $sentData['description'];
+        $comic->price = $sentData['title'];
+        $comic->series = $sentData['title'];
+        $comic->type = $sentData['title'];
+        $comic->sale_date = $sentData['title'];
+        
+
+
     }
 
     /**
