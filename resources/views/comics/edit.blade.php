@@ -12,34 +12,34 @@
 
                 <div class="col-md-6">
                     <label for="input-title" class="form-label">Title</label>
-                    <input type="text" name="title" class="form-control" id="input-title" required>
+                    <input type="text" name="title" class="form-control" id="input-title" >
                 </div>
                 <div class="col-md-6">
                     <label for="input-description" class="form-label">description</label>
-                    <textarea class="form-control" name="description" id="input-description" cols="30" rows="10" required></textarea>
+                    <textarea class="form-control" name="description" id="input-description" cols="30" rows="10" ></textarea>
                 </div>
                 <div class="col-md-6">
                     <label for="input-thumb" class="form-label">thumb</label>
-                    <input class="form-control" name="thumb" id="input-thumb" required>
+                    <input class="form-control" name="thumb" id="input-thumb" >
                 </div>
                 <div class="col-12">
                     <label for="input-price" class="form-label">price</label>
-                    <input type="text" name="price" class="form-control" id="input-price" required>
+                    <input type="text" name="price" class="form-control" id="input-price" >
                 </div>
                 <div class="col-12">
                     <label for="input-series" class="form-label">series</label>
-                    <input type="text" name="series" class="form-control" id="input-series" required>
+                    <input type="text" name="series" class="form-control" id="input-series" >
                 </div>
                 <div class="col-md-6">
                     <label for="input-type" class="form-label">type</label>
-                    <input type="text" name="type" class="form-control" id="input-type" required>
+                    <input type="text" name="type" class="form-control" id="input-type" >
                 </div>
                 <div class="col-md-6">
                     <label for="input-sale_date" class="form-label">sale-date</label>
-                    <input type="date" name="sale_date" class="form-control" id="input-sale_date"required>
+                    <input type="date" name="sale_date" class="form-control" id="input-sale_date">
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <button type="submit" class="btn btn-primary">Edit in</button>
                 </div>
             </form>
         </div>
