@@ -5,7 +5,7 @@
 @section('main-content')
     <div class="container my-5">
         <div class="row">
-            <form action="{{ route('comics.store') }}" class="row g-3">
+            <form action="{{ route('comics.store') }}" method="POST" class="row g-3">
                 <div class="col-md-6">
                     <label for="inputEmail4" class="form-label">Email</label>
                     <input type="email" class="form-control" id="inputEmail4">
