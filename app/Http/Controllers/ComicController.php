@@ -43,10 +43,14 @@ class ComicController extends Controller
         $comic = new Comic();
         $comic->title = $sentData['title'];
         $comic->description = $sentData['description'];
-        $comic->price = $sentData['title'];
-        $comic->series = $sentData['title'];
-        $comic->type = $sentData['title'];
-        $comic->sale_date = $sentData['title'];
+        $comic->thumb = $sentData['thumb'];
+        $comic->price = $sentData['price'];
+        $comic->series = $sentData['series'];
+        $comic->type = $sentData['type'];
+        $comic->sale_date = $sentData['sale_date'];
+        $comic->save();
+
+        return redirect()->route('comics.show',compact('comic'));
         
 
 

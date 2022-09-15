@@ -17,6 +17,10 @@
                     <label for="input-description" class="form-label">description</label>
                     <textarea class="form-control" name="description" id="input-description" cols="30" rows="10"></textarea>
                 </div>
+                <div class="col-md-6">
+                    <label for="input-thumb" class="form-label">thumb</label>
+                    <input class="form-control" name="thumb" id="input-thumb">
+                </div>
                 <div class="col-12">
                     <label for="input-price" class="form-label">price</label>
                     <input type="text" name="price" class="form-control" id="input-price">
