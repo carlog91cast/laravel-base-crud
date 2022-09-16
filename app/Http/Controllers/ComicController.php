@@ -92,15 +92,16 @@ class ComicController extends Controller
        $sentData = $request->all();
        
        $comic = Comic::findOrFail($id);
+       $comic->update($sentData);
 
-       $comic->title = $sentData['title'];
-       $comic->description = $sentData['description'];
-       $comic->thumb = $sentData['thumb'];
-       $comic->price = $sentData['price'];
-       $comic->series = $sentData['series'];
-       $comic->type = $sentData['type'];
-       $comic->sale_date = $sentData['sale_date'];
-       $comic->save();
+    //    $comic->title = $sentData['title'];
+    //    $comic->description = $sentData['description'];
+    //    $comic->thumb = $sentData['thumb'];
+    //    $comic->price = $sentData['price'];
+    //    $comic->series = $sentData['series'];
+    //    $comic->type = $sentData['type'];
+    //    $comic->sale_date = $sentData['sale_date'];
+    //    $comic->save();
 
        return redirect()->route('comics.index', $comic->id);
 
