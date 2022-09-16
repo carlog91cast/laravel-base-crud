@@ -21,8 +21,10 @@
                             <td><a href="{{ route('comics.show', $comic->id) }}">{{ $comic->title }}</a></td>
                             <td>{{ $comic->sale_date }}</td>
                             <td>{{ $comic->price }}</td>
-                            <td><button class="btn btn-primary"><a href="{{ route('comics.edit', $comic->id) }}">Edit</a></button></td>
-                            <td><button class="btn btn-danger"><a href="">Delete</a></button></td>
+                            <td><button class="btn btn-primary"><a class="text-decoration-none text-white"
+                                        href="{{ route('comics.edit', $comic->id) }}">Edit</a></button></td>
+                            <td><button class="btn btn-danger"><a class="text-decoration-none text-white"
+                                        href="">Delete</a></button></td>
                         </tr>
                     @endforeach
                 </tbody>
