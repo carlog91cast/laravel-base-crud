@@ -40,6 +40,22 @@ class ComicController extends Controller
     {
         $sentData = $request->all();
 
+        $validateData = $request->validate(
+            [
+                'title' => 'required|max:50',
+                'description' => 'max:60000',
+                'thumb' => 'required|max:60000',
+                'price' => 'required|max:3',
+                'series' => 'required|max:20',
+                'type' => 'required|max:20',
+                'sale_date' => 'required|max:15',
+                
+            ],
+            [
+                'title.required' => 'aho, sto titolo ce lo volemo mette, Frà?'
+            ]
+        );
+
         $comic = new Comic();
         $comic->title = $sentData['title'];
         $comic->description = $sentData['description'];
@@ -51,6 +67,8 @@ class ComicController extends Controller
         $comic->save();
 
         return redirect()->route('comics.show',compact('comic'));
+
+
         
 
 
