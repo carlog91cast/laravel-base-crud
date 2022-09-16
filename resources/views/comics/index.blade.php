@@ -5,6 +5,11 @@
 @section('main-content')
     <div class="container">
         <div class="row">
+            @if (session('delete'))
+                <div class="alert alert-success">
+                    {{ session('delete') }} è stato cancellato per sempre dall'orbe terracqueo
+                </div>
+            @endif
             <table class="table table-striped table-hover mt-5">
                 <thead>
                     <tr>
@@ -24,7 +29,8 @@
                             <td><button class="btn btn-primary"><a class="text-decoration-none text-white"
                                         href="{{ route('comics.edit', $comic->id) }}">Edit</a></button></td>
                             <td>
-                                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                <form class="form-delete" action="{{ route('comics.destroy', $comic->id) }}"
+                                    method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger"><a class="text-decoration-none text-white"
@@ -38,4 +44,19 @@
         </div>
     </div>
 
+@endsection
+
+@section('footer-scripts')
+    <script>
+        const deleteFormElements = document.querySelectorAll('.form-delete');
+        deleteFormElements.forEach(
+            formElement => {
+                formElement.addEventListener('submit', function(event){
+                    event.preventDefault();
+                    const result = window.confirm('vuoi davvero andare avanti?');
+                    if(result) this.submit();
+                })
+            }
+        )
+    </script>
 @endsection
